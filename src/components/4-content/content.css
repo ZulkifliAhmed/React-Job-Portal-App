@@ -1,0 +1,139 @@
+.Content {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.Content .job_box {
+  width: 70%;
+}
+.Content .job_box .post {
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border:  1px solid var(--border-color);
+  background-color: var(--main-color);
+}
+.Content .job_box .job_titel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Content .job_box span,
+.Content .job_box .job_titel h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.Content .job_box .job_titel h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #343a40;
+}
+.Content .job_titel h3 span {
+  font-size: 18px;
+}
+.Content .job_box span {
+  color: #6c757d;
+}
+.Content .job_box .add_time {
+  font-size: 14px;
+}
+.Content .job_box .job_description {
+  margin-top: 15px;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-color);
+}
+.Content .job_box .job_contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+.Content .job_box .job_contact span {
+  font-size: 14px;
+}
+.Content .job_box .job_contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--bg-color);
+}
+.Content .job_box .whatsapp,
+.Content .job_box .gmail {
+  font-size: 20px;
+  color: var(--green-color);
+}
+.Content .job_filter {
+  width: 25%;
+  padding: 20px;
+  border-radius: 5px;
+  border:  1px solid var(--border-color);
+  background-color: var(--main-color);
+}
+.Content .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ===== Media Queries ===== */
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .Content .job_box {
+    width: 100%;
+  }
+  .Content .job_filter {
+    display: none;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 600px) */
+@media (max-width: 599.98px) {
+  .Content .job_box .box {
+    padding: 10px;
+  }
+  .Content .job_box .job_titel h3 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .Content .job_titel h3 span {
+    font-size: inherit;
+  }
+  .Content .job_box .add_time {
+    font-size: 13px;
+  }
+}
+
+/* XX-Small devices (portrait phones, less than 360px) */
+@media (max-width: 359.98px) {
+  .Content .job_box .box {
+    padding: 10px;
+  }
+  .Content .job_box .job_titel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .Content .job_box .job_contact {
+    justify-content: space-between;
+  }
+  .Content .job_box .job_contact span {
+    font-size: 13px;
+  }
+  .Content .job_box .job_contact a {
+    font-size: 16px;
+  }
+  .Content .job_box .whatsapp,
+  .Content .job_box .gmail {
+    font-size: 15px;
+  }
+}

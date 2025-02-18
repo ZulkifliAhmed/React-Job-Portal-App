@@ -1,0 +1,109 @@
+.bar {
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px var(--border-color);
+  background-color: var(--main-color);
+}
+.bar .day_filter,
+.bar .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar .day_filter {
+  gap: 5px;
+}
+.search input,
+.search button {
+  padding: 0 5px;
+  outline: none;
+  font-family: inherit;
+  border: 1px solid var(--border-color);
+}
+.search input {
+  width: 50%;
+  font-size: 16px;
+  border-radius: 0 5px 5px 0;
+  color: var(--text-color);
+  background-color: var(--body-bg-color);
+}
+.search button {
+  padding: 1px 8px;
+  margin-right: -1px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+.mobile_sidebar {
+  display: none;
+}
+
+/* ===== Media Queries ===== */
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .bar {
+    position: relative;
+    padding: 15px 4%;
+  }
+  .search input {
+    width: 125px;
+  }
+  .mobile_sidebar h4 {
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    gap: 3px;
+    color: var(--bg-color);
+    cursor: default;
+  }
+  .mobile_sidebar span {
+    font-size: 20px;
+    color: var(--green-color);
+  }
+  .bar .right_side h3 {
+    display: none;
+  }
+  .bar .right_side {
+    padding: 10px;
+    position: absolute;
+    width: 200px;
+    top: 62px;
+    right: 0;
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .bar {
+    padding: 10px 5%;
+  }
+  .bar select {
+    padding: 0;
+  }
+  .bar .search {
+    display: none;
+  }
+  .mobile_sidebar h4,
+  .bar .day_filter label {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .bar .day_filter select {
+    font-size: 12px;
+  }
+  .mobile_sidebar span {
+    font-size: 18px;
+  }
+  .mobile_nav .search {
+    display: block;
+  }
+}

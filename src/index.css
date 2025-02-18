@@ -1,0 +1,145 @@
+/* ===== Google Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap");
+
+/* ===== Global Rulls ===== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #fff;
+  --border-color: #d3c9c9;
+  --bg-color: #1b639e;
+  --green-color: #0dde68;
+  --body-bg-color: #efeee5;
+  --text-color: #111;
+
+  --main-transition: 0.7s ease;
+}
+body {
+  font-family: "Noto Kufi Arabic", serif;
+  background-color: var(--body-bg-color);
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+label {
+  font-size: 16px;
+  color: var(--bg-color);
+}
+select {
+  color: var(--text-color);
+  border-radius: 4px;
+  padding: 0 5px;
+  outline: none;
+  font-family: inherit;
+  border: 1px solid var(--border-color);
+}
+
+/* ===== Content ===== */
+.main_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+.main_content .content_box {
+  flex-grow: 1;
+}
+
+/* ===== Pages ===== */
+.pages {
+  padding: 50px 0;
+  min-height: calc(100vh - 58px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pages .container{
+  width: 500px;
+  padding: 50px;
+  border-radius: 15px;
+  background-color: var(--main-color);
+  border: 1px solid var(--border-color);
+}
+.pages .container h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--bg-color);
+}
+.pages .container p {
+  color: var(--text-color);
+}
+
+/* ===== Conatct ===== */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 15px;
+}
+.contact form input,
+.contact form textarea {
+  width: 300px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+.contact form input {
+  padding: 3px 10px;
+}
+.contact form textarea {
+  padding: 10px;
+  min-height: 200px;
+  resize: none;
+}
+.contact form button {
+  padding: 2px 15px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: inherit;
+  cursor: pointer;
+  color: var(--main-color);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: var(--bg-color);
+  transition: var(--main-transition);
+}
+.contact form button:hover {
+  color: var(--bg-color);
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+}
+
+/* ===== Media Queries ===== */
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .pages {
+    padding: 25px 0
+  }
+  .pages .container {
+    width: 95%;
+    padding: 10px 15px 10px 5px;
+    border-radius: 10px;
+  }
+  .pages .container h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .contact form input,
+  .contact form textarea {
+    width: 250px;
+  }
+}

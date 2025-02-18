@@ -1,0 +1,209 @@
+/* ===== Header ===== */
+.header {
+  padding: 12px 0;
+  background-color: var(--bg-color);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Logo ===== */
+.logo a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.logo a span {
+  color: var(--green-color);
+}
+.logo a:hover {
+  color: var(--green-color);
+}
+
+/* ===== Navbar ===== */
+.header .container .navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar ul li {
+  margin: 0 15px;
+  transition: var(--main-transition);
+  border-bottom: 2px solid transparent;
+}
+.navbar ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+.navbar ul li:hover a {
+  color: var(--green-color);
+}
+.navbar ul li:hover {
+  border-bottom: 2px solid var(--green-color);
+}
+
+/* ===== Header Left ===== */
+.Header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   gap: 30px;
+}
+.Header_left .country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.Header_left .country-icon {
+  display: flex;
+  font-size: 25px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.Header_left .country select {
+  padding: 0 8px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--bg-color);
+}
+.Header_left .registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Header_left .registration div:first-child {
+  padding: 2px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: var(--green-color);
+  transition: var(--main-transition);
+}
+.Header_left .registration div:first-child:hover {
+  background-color: transparent;
+  border: 1px solid var(--green-color);
+}
+.Header_left .registration div:last-child:hover a{
+  color: var(--green-color);
+}
+.Header_left .registration a {
+  font-size: 14px;
+  color: var(--main-color);
+  transition: var(--main-transition);
+}
+
+/* ===== Menu Icon ===== */
+.header .HamburgerMenu {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+/* ===== Mobile Navbar ===== */
+.mobile_nav {
+  display: none;
+}
+
+/* ===== Media Queries ===== */
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .Header_left {
+    flex-basis: 10%;
+  }
+  .header .registration {
+    display: none;
+  }
+  .mobile_nav .search {
+    display: none;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .header {
+    padding: 8px 0;
+  }
+  .header .navbar {
+    display: none;
+  }
+  .header .HamburgerMenu {
+    display: flex;
+  }
+  .header .country {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+
+  /* ===== Mobile Navbar ===== */
+  .mobile_nav {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .mobile_nav .box {
+    width: 350px;
+    padding: 30px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    background-color: var(--bg-color);
+  }
+  .mobile_nav .box .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile_nav .Cross {
+    display: flex;
+    font-size: 25px;
+    color: var(--main-color);
+    cursor: pointer;
+  }
+  .Header_left .country select {
+    padding: 0px;
+    font-weight: normal;
+  }
+  .mobile_nav .registration {
+    display: none;
+  }
+  .mobile_nav .bottom-bar .logo {
+    margin-bottom: 15px;
+  }
+  .mobile_nav .navbar ul li {
+    margin: 0 0 5px;
+    width: fit-content;
+  }
+  .mobile_nav .search input {
+    width: 60%;
+  }
+  .mobile_nav .search button{
+    background-color: var(--green-color);
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .mobile_nav .box {
+    width: 300px;
+  }
+}

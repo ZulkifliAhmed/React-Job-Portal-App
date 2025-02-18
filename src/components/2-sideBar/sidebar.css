@@ -1,0 +1,41 @@
+.main_content .sidebar {
+  min-height: 80vh;
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 5px;
+  border:  1px solid var(--border-color);
+  background-color: var(--main-color);
+}
+.right_side h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--bg-color);
+}
+.right_side li {
+  margin: 5px 0;
+}
+.right_side li a {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--text-color);
+}
+.right_side li a:hover {
+  color: var(--green-color);
+  transition: var(--main-transition);
+}
+
+
+/* ===== Media Queries ===== */
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 767.98px) {
+  .main_content .sidebar {
+    display: none;
+  }
+  .main_content .mobile_sidebar {
+    display: block;
+  }
+}
+
+ 
